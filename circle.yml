@@ -1,0 +1,8 @@
+machine:
+  services:
+    - docker
+test:
+  pre:
+    - docker build --tag test .
+  override:
+    - sh ./test.sh
